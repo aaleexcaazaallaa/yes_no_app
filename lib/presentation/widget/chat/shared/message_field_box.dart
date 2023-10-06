@@ -36,6 +36,7 @@ class MessageFieldBox extends StatelessWidget {
             icon: const Icon(Icons.send_outlined)));
 
     return TextFormField(
+      onTap: chatProvider.refresh,
       onTapOutside: (over) {
         focusNode.unfocus();
       },

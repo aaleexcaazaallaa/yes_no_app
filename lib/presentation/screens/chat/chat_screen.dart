@@ -12,6 +12,7 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         leading: const Padding(
           padding: EdgeInsets.all(4.0),
@@ -32,7 +33,6 @@ class _ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final chatProvider = context.watch<ChatProvider>();
-
     return SafeArea(
         child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
