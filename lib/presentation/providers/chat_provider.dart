@@ -33,7 +33,7 @@ class ChatProvider extends ChangeNotifier {
     await Future.delayed(const Duration(microseconds: 100));
 
     chatScrollController.animateTo(
-        chatScrollController.position.maxScrollExtent + 50,
+        chatScrollController.position.maxScrollExtent + 30,
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeOut);
   }

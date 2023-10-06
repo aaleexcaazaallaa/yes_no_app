@@ -24,7 +24,7 @@ class HerMessageBubble extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 5),
-        _ImageBubble(message.imageUrl!),
+        _ImageBubble(image: message.imageUrl),
         const SizedBox(height: 5)
       ],
     );
@@ -32,6 +32,10 @@ class HerMessageBubble extends StatelessWidget {
 }
 
 class _ImageBubble extends StatelessWidget {
+  final String? image;
+
+  const _ImageBubble({required this.image});
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
